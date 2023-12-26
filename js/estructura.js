@@ -522,7 +522,7 @@ const user_content = `
                 </div>
 
                 <div class="form-floating">
-                    <input type="password" id="apellido_usuario" class="form-control" placeholder="Last name" disabled>
+                    <input type="text" id="apellido_usuario" class="form-control" placeholder="Last name" disabled>
                     <label for="apellido_usuario">Last name</label>
                 </div>
 
@@ -539,7 +539,7 @@ const user_content = `
                 <div class="form-floating">
                     <select id="country_usuario" class="form-select" disabled>
                         <option value=""></option>
-                        <option value="">Más opciones</option>
+                        <option value="otro">Otro</option>
                     </select>
                     <label for="country_usuario">Country</label>
                 </div>
@@ -547,7 +547,7 @@ const user_content = `
                 <div class="form-floating">
                     <select id="city_usuario" class="form-select" disabled>
                         <option value=""></option>
-                        <option value="">Más opciones</option>
+                        <option value="otro">Otro</option>
                     </select>
                     <label for="city_usuario">City</label>
                 </div>
@@ -559,7 +559,11 @@ const user_content = `
             </div>
             <br>
             
-            <button class="btn button_login" style="width: 100%">Editar</button>
+            <button class="btn button_login" id="edit_usuario" style="width: 100%" onclick="edit(1)">Editar</button>
+            <div id="btn_user_actions" style="display: none; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <button class="btn button_login" onclick="update_userlog()">Save</button>
+                <button class="btn" onclick="edit(2)">Cancel</button>
+            </div>
         </div>
     </main>
 </div>

@@ -23,10 +23,9 @@ class login {
         this.auth.signInWithEmailAndPassword(email, clave)
             .then((userCredential) => {
                 var user = userCredential.user;
-                var user_data = JSON.stringify(user);
+                // var user_data = JSON.stringify(user);
                 // console.log(user.uid);
                 localStorage.setItem("uid", user.uid);
-                localStorage.setItem("user", user_data);
             })
             .catch((error) => {
                 alert("Usuario o contraseña incorrectos");
@@ -52,7 +51,7 @@ class login {
                 // console.log(user);
 
                 /* Guardamos los datos del usuario en la base de datos */
-                this.db.collection("users").add({
+                this.db.collection("users").doc(user.uid).set({
                     uid: user.uid,
                     username: usuario,
                     first: "",

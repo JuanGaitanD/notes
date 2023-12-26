@@ -41,6 +41,7 @@ function link_navbar(n) {
         
         case 3:
             document.getElementById("content").innerHTML = user_content;
+            load_user();
             break;
 
         default:
