@@ -1,0 +1,63 @@
+/*
+    Paleta de colores a usar:
+
+    #233622
+    #44664b
+    #82a682
+    #becfad
+    #e0e4d3
+    #e7eee6 - Fondo
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'noto sans', sans-serif;
+}
+
+body{
+    background-color: #e7eee6;
+}
+
+a{
+    text-decoration: none;
+    color: #233622;
+}
+
+.button_login{
+    background-color: #233622;
+    color: #e7eee6;
+}
+.button_login:hover, .button_login:focus{
+    background-color: #e7eee6;
+    color: #233622;
+    transform: scale(1.05);
+    transition: 0.3s;
+
+    border-color: #233622
+}
+
+#form{
+    background-color: #44664b;
+    width: 400px;
+    margin-inline: auto;
+
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    
+    display: grid;
+    gap: 20px;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
