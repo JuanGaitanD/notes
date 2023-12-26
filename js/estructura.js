@@ -175,69 +175,69 @@ const home_content = `
 
 
 <aside id="home_aside">
-<main id="navbar">
-    <div id="icon_navbar">
-        <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
-        <input type="hidden" id="control_navbar" value="0">
-    </div>
-
-    <div id="navbar_title">
-        <div id="name">
-            <!-- <img src="" alt="Icon"> -->
-            <h1 id="nombre_navbar">NOMBRE</h1>
+    <main id="navbar">
+        <div id="icon_navbar">
+            <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
+            <input type="hidden" id="control_navbar" value="0">
         </div>
+
+        <div id="navbar_title">
+            <div id="name">
+                <!-- <img src="" alt="Icon"> -->
+                <h1 id="nombre_navbar">NOMBRE</h1>
+            </div>
+        </div>
+
+        <div id="navbar_list">
+            <span onclick="link_navbar(1)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            home
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Home</span>
+                </div>
+            </span>
+
+            <span onclick="link_navbar(2)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            note_stack
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Notas</span>
+                </div>
+            </span>
+
+            <span onclick="link_navbar(3)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            account_circle
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Acount</span>
+                </div>
+            </span>
+
+            <!-- <span onclick="link_navbar(n)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            home
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Option</span>
+                </div>
+            </span> -->
+        </div>
+    </main>
+
+    <div>
+        <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
     </div>
-
-    <div id="navbar_list">
-        <a href="index.html">
-            <div class="navbar_item">
-                <div>
-                    <span class="material-symbols-outlined icon_list">
-                        home
-                    </span>
-                </div>
-                <span class="span_navbar_item">Home</span>
-            </div>
-        </a>
-
-        <a href="note.html">
-            <div class="navbar_item">
-                <div>
-                    <span class="material-symbols-outlined icon_list">
-                        note_stack
-                    </span>
-                </div>
-                <span class="span_navbar_item">Notas</span>
-            </div>
-        </a>
-
-        <a href="#">
-            <div class="navbar_item">
-                <div>
-                    <span class="material-symbols-outlined icon_list">
-                        account_circle
-                    </span>
-                </div>
-                <span class="span_navbar_item">Acount</span>
-            </div>
-        </a>
-
-        <!-- <a href="#">
-            <div class="navbar_item">
-                <div>
-                    <span class="material-symbols-outlined icon_list">
-                        home
-                    </span>
-                </div>
-                <span class="span_navbar_item">Option</span>
-            </div>
-        </a> -->
-    </div>
-</main>
-
-<div>
-    <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
-</div>
 </aside>
 `;
 
@@ -291,166 +291,198 @@ const login_content = `
 `;
 
 const note_content = `
-<section>
-        <div class="container">
-            <header>
-                <div id="name">
-                    <img src="" alt="Icon">
-                    <h1>NOMBRE</h1>
-                </div>
-                <div id="description">
-                    DETALLES
-                </div>
-            </header>
+<section id="home_section">
+    <div class="container">
+        <header>
+            <div id="name">
+                <img src="" alt="Icon">
+                <h1>NOMBRE</h1>
+            </div>
+            <div id="description">
+                DETALLES
+            </div>
+        </header>
 
-            <main>
-                <div id="nota">
-                    <div id="nota_title">
-                        <h2>Titulo</h2>
-                    </div>
-
-                    <div id="nota_content">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
-                            aspernatur dolores tempora laboriosam optio architecto exercitationem commodi consequatur
-                            voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
-                            quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
-                            architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in quaerat
-                            reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
-                            Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos beatae
-                            explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta quam
-                            rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
-                            aspernatur dolores tempora laboriosam optio architecto exercitationem commodi consequatur
-                            voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
-                            quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
-                            architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in quaerat
-                            reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
-                            Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos beatae
-                            explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta quam
-                            rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
-                            aspernatur dolores tempora laboriosam optio architecto exercitationem commodi consequatur
-                            voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
-                            quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
-                            architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in quaerat
-                            reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
-                            Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos beatae
-                            explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta quam
-                            rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
-                            aspernatur dolores tempora laboriosam optio architecto exercitationem commodi consequatur
-                            voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
-                            quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
-                            architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in quaerat
-                            reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
-                            Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos beatae
-                            explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta quam
-                            rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
-                            aspernatur dolores tempora laboriosam optio architecto exercitationem commodi consequatur
-                            voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
-                            quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
-                            architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in quaerat
-                            reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
-                            Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos beatae
-                            explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta quam
-                            rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
-                            aspernatur dolores tempora laboriosam optio architecto exercitationem commodi consequatur
-                            voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
-                            quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
-                            architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in quaerat
-                            reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
-                            Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos beatae
-                            explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta quam
-                            rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
-                            aspernatur dolores tempora laboriosam optio architecto exercitationem commodi consequatur
-                            voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
-                            quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
-                            architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in quaerat
-                            reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
-                            Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos beatae
-                            explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta quam
-                            rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
-                    </div>
+        <main>
+            <div id="nota">
+                <div id="nota_title">
+                    <h2>Titulo</h2>
                 </div>
 
-
-                <div id="btn_actions">
-                    <center>
-                        <button class="btn button_login">Editar</button>
-                        <button class="btn">Eliminar</button>
-                    </center>
+                <div id="nota_content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
+                        aspernatur dolores tempora laboriosam optio architecto exercitationem commodi
+                        consequatur
+                        voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
+                        quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
+                        architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in
+                        quaerat
+                        reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
+                        Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos
+                        beatae
+                        explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta
+                        quam
+                        rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
+                        aspernatur dolores tempora laboriosam optio architecto exercitationem commodi
+                        consequatur
+                        voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
+                        quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
+                        architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in
+                        quaerat
+                        reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
+                        Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos
+                        beatae
+                        explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta
+                        quam
+                        rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
+                        aspernatur dolores tempora laboriosam optio architecto exercitationem commodi
+                        consequatur
+                        voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
+                        quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
+                        architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in
+                        quaerat
+                        reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
+                        Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos
+                        beatae
+                        explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta
+                        quam
+                        rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
+                        aspernatur dolores tempora laboriosam optio architecto exercitationem commodi
+                        consequatur
+                        voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
+                        quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
+                        architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in
+                        quaerat
+                        reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
+                        Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos
+                        beatae
+                        explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta
+                        quam
+                        rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
+                        aspernatur dolores tempora laboriosam optio architecto exercitationem commodi
+                        consequatur
+                        voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
+                        quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
+                        architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in
+                        quaerat
+                        reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
+                        Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos
+                        beatae
+                        explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta
+                        quam
+                        rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
+                        aspernatur dolores tempora laboriosam optio architecto exercitationem commodi
+                        consequatur
+                        voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
+                        quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
+                        architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in
+                        quaerat
+                        reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
+                        Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos
+                        beatae
+                        explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta
+                        quam
+                        rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur itaque ea facilis
+                        aspernatur dolores tempora laboriosam optio architecto exercitationem commodi
+                        consequatur
+                        voluptates, eligendi fugit aut libero debitis voluptatibus! Animi repellat nobis ratione
+                        quam dolores sit porro odit temporibus labore adipisci, repellendus suscipit fuga ipsam
+                        architecto vitae harum voluptas. Ipsam, atque. Ea iste, natus hic consequuntur in
+                        quaerat
+                        reprehenderit! Iste, quas voluptatem fuga assumenda sed neque perferendis obcaecati!
+                        Consectetur sunt harum eligendi commodi libero, nisi molestiae, excepturi dignissimos
+                        beatae
+                        explicabo, magnam qui placeat vero reprehenderit nesciunt veritatis recusandae dicta
+                        quam
+                        rerum ut officia et doloribus pariatur. Placeat inventore officiis totam nesciunt?</p>
                 </div>
-            </main>
-        </div>
-    </section>
-
-
-    <aside>
-        <main id="navbar">
-            <div id="icon_navbar">
-                <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
-                <input type="hidden" id="control_navbar" value="0">
             </div>
 
-            <div id="navbar_title">
-                <div id="name">
-                    <!-- <img src="" alt="Icon"> -->
-                    <h1 id="nombre_navbar">NOMBRE</h1>
-                </div>
-            </div>
 
-            <div id="navbar_list">
-                <a href="index.html">
-                    <div class="navbar_item">
-                        <div>
-                            <span class="material-symbols-outlined icon_list">
-                                home
-                            </span>
-                        </div>
-                        <span class="span_navbar_item">Home</span>
-                    </div>
-                </a>
-
-                <a href="note.html">
-                    <div class="navbar_item">
-                        <div>
-                            <span class="material-symbols-outlined icon_list">
-                                note_stack
-                            </span>
-                        </div>
-                        <span class="span_navbar_item">Notas</span>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="navbar_item">
-                        <div>
-                            <span class="material-symbols-outlined icon_list">
-                                account_circle
-                            </span>
-                        </div>
-                        <span class="span_navbar_item">Acount</span>
-                    </div>
-                </a>
-
-                <!-- <a href="#">
-                    <div class="navbar_item">
-                        <div>
-                            <span class="material-symbols-outlined icon_list">
-                                home
-                            </span>
-                        </div>
-                        <span class="span_navbar_item">Option</span>
-                    </div>
-                </a> -->
+            <div id="btn_actions">
+                <center>
+                    <button class="btn button_login">Editar</button>
+                    <button class="btn">Eliminar</button>
+                </center>
             </div>
         </main>
+    </div>
+</section>
 
-        <div>
-            <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
+
+<aside id="home_aside">
+    <main id="navbar">
+        <div id="icon_navbar">
+            <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
+            <input type="hidden" id="control_navbar" value="0">
         </div>
-    </aside>
+
+        <div id="navbar_title">
+            <div id="name">
+                <!-- <img src="" alt="Icon"> -->
+                <h1 id="nombre_navbar">NOMBRE</h1>
+            </div>
+        </div>
+
+        <div id="navbar_list">
+            <span onclick="link_navbar(1)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            home
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Home</span>
+                </div>
+            </span>
+
+            <span onclick="link_navbar(2)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            note_stack
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Notas</span>
+                </div>
+            </span>
+
+            <span onclick="link_navbar(3)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            account_circle
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Acount</span>
+                </div>
+            </span>
+
+            <!-- <span onclick="link_navbar(n)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            home
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Option</span>
+                </div>
+            </span> -->
+        </div>
+    </main>
+
+    <div>
+        <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
+    </div>
+</aside>
+`;
+
+const user_content = `
+    <h1>Pendiente usuarios</h1>
 `;

@@ -28,3 +28,24 @@ function navbar() {
             break;
     }
 }
+
+function link_navbar(n) {
+    switch (n) {
+        case 1:
+            document.getElementById("content").innerHTML = home_content;
+            break;
+
+        case 2:
+            document.getElementById("content").innerHTML = note_content;
+            break;
+        
+        case 3:
+            document.getElementById("content").innerHTML = user_content;
+            break;
+
+        default:
+            document.getElementById("content").innerHTML = "<h1>ERROR</h1>";
+            break;
+    }
+}
+/* Hay otra función en navegation.js */
