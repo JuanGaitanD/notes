@@ -1,3 +1,53 @@
+const login_content = `
+<section>
+<div class="container" id="container">
+    <div id="home">
+        <center><img src="img/notebook_icon.png" alt="notebook_icon" width="100px" style="margin-bottom: 10px;">
+        </center>
+
+        <h1>Your notes</h1>
+        <p>Login in to make your notes</p>
+
+        <center>
+            <button class="btn button_login" onclick="nav(1)">Login</button>
+        </center>
+    </div>
+
+    <div id="login" class="hide">
+        <center><img src="img/notebook_icon.png" alt="notebook_icon" width="100px" style="margin-bottom: 10px;">
+        </center>
+
+        <h1>Login</h1>
+        <br>
+
+        <div id="form">
+            <input type="text" id="email_login" class="form-control" placeholder="Email" required>
+            <input type="password" id="password_login" class="form-control" placeholder="Password" required>
+            <button class="btn button_login" onclick="action(1)">Login</button>
+            <button class="btn" onclick="nav(2)" style="color: #e7eee6">Register</button>
+        </div>
+    </div>
+
+    <div id="register" class="hide">
+        <center><img src="img/notebook_icon.png" alt="notebook_icon" width="100px" style="margin-bottom: 10px;">
+        </center>
+
+        <h1>Register</h1>
+        <br>
+
+        <div id="form">
+            <input type="text" id="username" class="form-control" placeholder="Username" required>
+            <input type="email" id="email" class="form-control" placeholder="Email" required>
+            <input type="password" id="password" class="form-control" placeholder="Password" required>
+            <button class="btn button_login" onclick="action(2)">Register</button>
+            <button class="btn" onclick="nav(1)" style="color: #e7eee6">Back</button>
+        </div>
+        <center><p id="register_user" style="display: none">Ahora puedes ingresar con tu correo y contraseña</p></center>
+    </div>
+</div>
+</section>
+`;
+
 const home_content = `
 <section id="home_section">
 <div class="container">
@@ -241,55 +291,6 @@ const home_content = `
 </aside>
 `;
 
-const login_content = `
-<section>
-<div class="container" id="container">
-    <div id="home">
-        <center><img src="img/notebook_icon.png" alt="notebook_icon" width="100px" style="margin-bottom: 10px;">
-        </center>
-
-        <h1>Your notes</h1>
-        <p>Login in to make your notes</p>
-
-        <center>
-            <button class="btn button_login" onclick="nav(1)">Login</button>
-        </center>
-    </div>
-
-    <div id="login" class="hide">
-        <center><img src="img/notebook_icon.png" alt="notebook_icon" width="100px" style="margin-bottom: 10px;">
-        </center>
-
-        <h1>Login</h1>
-        <br>
-
-        <div id="form">
-            <input type="text" id="email_login" class="form-control" placeholder="Email" required>
-            <input type="password" id="password_login" class="form-control" placeholder="Password" required>
-            <button class="btn button_login" onclick="action(1)">Login</button>
-            <button class="btn" onclick="nav(2)" style="color: #e7eee6">Register</button>
-        </div>
-    </div>
-
-    <div id="register" class="hide">
-        <center><img src="img/notebook_icon.png" alt="notebook_icon" width="100px" style="margin-bottom: 10px;">
-        </center>
-
-        <h1>Register</h1>
-        <br>
-
-        <div id="form">
-            <input type="text" id="username" class="form-control" placeholder="Username" required>
-            <input type="email" id="email" class="form-control" placeholder="Email" required>
-            <input type="password" id="password" class="form-control" placeholder="Password" required>
-            <button class="btn button_login" onclick="action(2)">Register</button>
-            <button class="btn" onclick="nav(1)" style="color: #e7eee6">Back</button>
-        </div>
-    </div>
-</div>
-</section>
-`;
-
 const note_content = `
 <section id="home_section">
     <div class="container">
@@ -484,5 +485,150 @@ const note_content = `
 `;
 
 const user_content = `
-    <h1>Pendiente usuarios</h1>
+<section id="home_section">
+<div class="container">
+    <header>
+        <div id="name">
+            <img src="" alt="Icon">
+            <h1>NOMBRE</h1>
+        </div>
+        <div id="description">
+            <p>En este espacio podrás ver, editar y borrar tu cuenta. Lo que tu desees.</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="description">
+            <h2>Datos del usuario</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <div class="form-floating">
+                    <input type="text" id="username_usuario" class="form-control" placeholder="Username" disabled>
+                    <label for="username_usuario">Username</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="email" id="correo_usuario" class="form-control" placeholder="Email" disabled>
+                    <label for="correo_usuario">Email</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="password" id="password_usuario" class="form-control" placeholder="Password" disabled>
+                    <label for="password_usuario">Password</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" id="nombre_usuario" class="form-control" placeholder="First name" disabled>
+                    <label for="nombre_usuario">First name</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="password" id="apellido_usuario" class="form-control" placeholder="Last name" disabled>
+                    <label for="apellido_usuario">Last name</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="number" id="age_usuario" class="form-control" placeholder="Age" min="1" disabled>
+                    <label for="age_usuario">Age</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="tel" id="phone_usuario" class="form-control" placeholder="Phone" disabled>
+                    <label for="phone_usuario">Phone</label>
+                </div>
+
+                <div class="form-floating">
+                    <select id="country_usuario" class="form-select" disabled>
+                        <option value=""></option>
+                        <option value="">Más opciones</option>
+                    </select>
+                    <label for="country_usuario">Country</label>
+                </div>
+
+                <div class="form-floating">
+                    <select id="city_usuario" class="form-select" disabled>
+                        <option value=""></option>
+                        <option value="">Más opciones</option>
+                    </select>
+                    <label for="city_usuario">City</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" id="adress_usuario" class="form-control" placeholder="Adress" disabled>
+                    <label for="adress_usuario">Adress</label>
+                </div>
+            </div>
+            <br>
+            
+            <button class="btn button_login" style="width: 100%">Editar</button>
+        </div>
+    </main>
+</div>
+</section>
+
+
+<aside id="home_aside">
+<main id="navbar">
+    <div id="icon_navbar">
+        <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
+        <input type="hidden" id="control_navbar" value="0">
+    </div>
+
+    <div id="navbar_title">
+        <div id="name">
+            <!-- <img src="" alt="Icon"> -->
+            <h1 id="nombre_navbar">NOMBRE</h1>
+        </div>
+    </div>
+
+    <div id="navbar_list">
+        <span onclick="link_navbar(1)">
+            <div class="navbar_item">
+                <div>
+                    <span class="material-symbols-outlined icon_list">
+                        home
+                    </span>
+                </div>
+                <span class="span_navbar_item">Home</span>
+            </div>
+        </span>
+
+        <span onclick="link_navbar(2)">
+            <div class="navbar_item">
+                <div>
+                    <span class="material-symbols-outlined icon_list">
+                        note_stack
+                    </span>
+                </div>
+                <span class="span_navbar_item">Notas</span>
+            </div>
+        </span>
+
+        <span onclick="link_navbar(3)">
+            <div class="navbar_item">
+                <div>
+                    <span class="material-symbols-outlined icon_list">
+                        account_circle
+                    </span>
+                </div>
+                <span class="span_navbar_item">Acount</span>
+            </div>
+        </span>
+
+        <!-- <span onclick="link_navbar(n)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            home
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Option</span>
+                </div>
+            </span> -->
+    </div>
+</main>
+
+<div>
+    <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
+</div>
+</aside>
 `;
