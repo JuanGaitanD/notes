@@ -10,6 +10,13 @@ function page() {
                     document.getElementById("content").innerHTML = login_content;
                 } else {
                     document.getElementById("content").innerHTML = home_content;
+                    document.getElementById("title_name").innerHTML = querySnapshot.docs[0].data().username;
+                    document.getElementById("description_name").innerHTML = querySnapshot.docs[0].data().description;
+                    document.getElementById("description_input").value = querySnapshot.docs[0].data().description;
+
+                    /* Cargamos las notas */
+                    var notes = new Notes(db, localStorage.getItem("uid"));
+                    notes.getNotes();
                 }
             })
             .catch((error) => {

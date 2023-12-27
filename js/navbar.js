@@ -30,6 +30,7 @@ function navbar() {
 }
 
 function link_navbar(n) {
+
     switch (n) {
         case 1:
             document.getElementById("content").innerHTML = home_content;
@@ -38,7 +39,7 @@ function link_navbar(n) {
         case 2:
             document.getElementById("content").innerHTML = note_content;
             break;
-        
+
         case 3:
             document.getElementById("content").innerHTML = user_content;
             load_user();
@@ -48,5 +49,17 @@ function link_navbar(n) {
             document.getElementById("content").innerHTML = "<h1>ERROR</h1>";
             break;
     }
+
+    /* Aquí llenamos los apartados relativos al usuario loggeado */
+    db.collection("users").where("uid", "==", localStorage.getItem("uid")).get()
+        .then((querySnapshot) => {
+            document.getElementById("title_name").innerHTML = querySnapshot.docs[0].data().username;
+            document.getElementById("description_name").innerHTML = querySnapshot.docs[0].data().description;
+            document.getElementById("description_input").value = querySnapshot.docs[0].data().description;
+        })
+        .catch((error) => {
+            alert("Error cargando nombre de usuario" + error);
+        })
 }
-/* Hay otra función en navegation.js */
+
+/* Hay otra función en onload.js */

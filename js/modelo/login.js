@@ -61,7 +61,8 @@ class login {
                     phone: "",
                     country: "",
                     city: "",
-                    adress: ""
+                    adress: "",
+                    description: "Here your description"
                 })
                 .catch((error) => {
                     console.log(error);

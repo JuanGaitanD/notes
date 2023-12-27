@@ -33,160 +33,25 @@
     <script src="js/estructura.js"></script>
     <script src="js/login.js"></script>
     <script src="js/modelo/login.js"></script>
+    <script src="js/modelo/user.js"></script>
+    <script src="js/user.js"></script>
     <script src="js/navbar.js"></script>
 </head>
 
 <body>
-    <div id="content">
-        <!-- Working with user page -->
-        <section id="home_section">
-            <div class="container">
-                <header>
-                    <div id="name">
-                        <img src="" alt="Icon">
-                        <h1>NOMBRE</h1>
-                    </div>
-                    <div id="description">
-                        <p>En este espacio podrás ver, editar y borrar tu cuenta. Lo que tu desees.</p>
-                    </div>
-                </header>
-
-                <main>
-                    <div id="description">
-                        <h2>Datos del usuario</h2>
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-                            <div class="form-floating">
-                                <input type="text" id="username_usuario" class="form-control" placeholder="Username" disabled>
-                                <label for="username_usuario">Username</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <input type="email" id="correo_usuario" class="form-control" placeholder="Email" disabled>
-                                <label for="correo_usuario">Email</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <input type="password" id="password_usuario" class="form-control" placeholder="Password" disabled>
-                                <label for="password_usuario">Password</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <input type="text" id="nombre_usuario" class="form-control" placeholder="First name" disabled>
-                                <label for="nombre_usuario">First name</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <input type="password" id="apellido_usuario" class="form-control" placeholder="Last name" disabled>
-                                <label for="apellido_usuario">Last name</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <input type="number" id="age_usuario" class="form-control" placeholder="Age" min="1" disabled>
-                                <label for="age_usuario">Age</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <input type="tel" id="phone_usuario" class="form-control" placeholder="Phone" disabled>
-                                <label for="phone_usuario">Phone</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <select id="country_usuario" class="form-select" disabled>
-                                    <option value=""></option>
-                                    <option value="">Más opciones</option>
-                                </select>
-                                <label for="country_usuario">Country</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <select id="city_usuario" class="form-select" disabled>
-                                    <option value=""></option>
-                                    <option value="">Más opciones</option>
-                                </select>
-                                <label for="city_usuario">City</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <input type="text" id="adress_usuario" class="form-control" placeholder="Adress" disabled>
-                                <label for="adress_usuario">Adress</label>
-                            </div>
-                        </div>
-                        <br>
-                        
-                        <button class="btn button_login" style="width: 100%">Editar</button>
-                    </div>
-                </main>
-            </div>
-        </section>
-
-
-        <aside id="home_aside">
-            <main id="navbar">
-                <div id="icon_navbar">
-                    <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
-                    <input type="hidden" id="control_navbar" value="0">
-                </div>
-
-                <div id="navbar_title">
-                    <div id="name">
-                        <!-- <img src="" alt="Icon"> -->
-                        <h1 id="nombre_navbar">NOMBRE</h1>
-                    </div>
-                </div>
-
-                <div id="navbar_list">
-                    <span onclick="link_navbar(1)">
-                        <div class="navbar_item">
-                            <div>
-                                <span class="material-symbols-outlined icon_list">
-                                    home
-                                </span>
-                            </div>
-                            <span class="span_navbar_item">Home</span>
-                        </div>
-                    </span>
-
-                    <span onclick="link_navbar(2)">
-                        <div class="navbar_item">
-                            <div>
-                                <span class="material-symbols-outlined icon_list">
-                                    note_stack
-                                </span>
-                            </div>
-                            <span class="span_navbar_item">Notas</span>
-                        </div>
-                    </span>
-
-                    <span onclick="link_navbar(3)">
-                        <div class="navbar_item">
-                            <div>
-                                <span class="material-symbols-outlined icon_list">
-                                    account_circle
-                                </span>
-                            </div>
-                            <span class="span_navbar_item">Acount</span>
-                        </div>
-                    </span>
-
-                    <!-- <span onclick="link_navbar(n)">
-                            <div class="navbar_item">
-                                <div>
-                                    <span class="material-symbols-outlined icon_list">
-                                        home
-                                    </span>
-                                </div>
-                                <span class="span_navbar_item">Option</span>
-                            </div>
-                        </span> -->
-                </div>
-            </main>
-
-            <div>
-                <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
-            </div>
-        </aside>
-    </div>
+    <div id="content"></div>
 </body>
 <!-- <script src="js/onload.js"></script> -->
 
 </html>
+
+<!-- <div class="note">
+    <div id="img">IMG</div>
+    <div class="content_note">
+        <h2>Titulo</h2>
+        <div class="text_note">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
+        </div>
+    </div>
+    <span class="material-symbols-outlined" id="span_edit" onclick="">edit</span>
+</div> -->

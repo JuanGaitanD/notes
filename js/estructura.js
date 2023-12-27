@@ -53,173 +53,39 @@ const home_content = `
 <div class="container">
     <header>
         <div id="name">
-            <img src="" alt="Icon">
-            <h1>NOMBRE</h1>
+            <img src="img/notebook_icon.png" alt="notebook_icon">
+            <h1 id="title_name"></h1>
         </div>
-        <div id="description">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus optio, dolorum consequatur unde
-                amet inventore alias iure tempora tenetur dolor.</p>
-            <a href="">Edit-Icon</a>
+        <div class="description" id="description">
+            <p id="description_name"></p>
+
+            <div id="c_description_input" class="form-floating hide">
+                <input type="text" id="description_input" class="form-control" placeholder="Description">
+                <label for="description_input">Description</label>
+            </div>
+
+            <span class="material-symbols-outlined" id="edit_description" onclick="edit_description(1)">edit</span>
+
+            <span class="material-symbols-outlined" id="cancel_edit_description" onclick="edit_description(3)" style="display: none">cancel</span>
+
+            <button id="edit_description_update" class="btn button_login" onclick="edit_description(2)">Actualizar</button>
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <div id="notes">
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
-
-            <div id="note">
-                <div id="img"></div>
-                <div id="content_note">
-                    <h2>Titulo</h2>
-                    <div id="text_note">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus?</p>
-                    </div>
-                </div>
-                <center>
-                    <a href="">Edit-Icon</a> |
-                    <a href="">Delete-Icon</a>
-                </center>
-            </div>
+            <div></div>
+            <center>
+                <h1 style="color: #e7eee6;">No hay notas</h1>
+            </center>
         </div>
     </main>
+
+    <div>
+        <button class="btn button_login" id="add_note" onclick="nav_notes(1)">
+            <li class="material-symbols-outlined">add</li>
+        </button>
+    </div>
 </div>
 </section>
 
@@ -294,15 +160,26 @@ const home_content = `
 const note_content = `
 <section id="home_section">
     <div class="container">
-        <header>
-            <div id="name">
-                <img src="" alt="Icon">
-                <h1>NOMBRE</h1>
+    <header>
+        <div id="name">
+            <img src="img/notebook_icon.png" alt="notebook_icon">
+            <h1 id="title_name"></h1>
+        </div>
+        <div class="description" id="description">
+            <p id="description_name"></p>
+
+            <div id="c_description_input" class="form-floating hide">
+                <input type="text" id="description_input" class="form-control" placeholder="Description">
+                <label for="description_input">Description</label>
             </div>
-            <div id="description">
-                DETALLES
-            </div>
-        </header>
+
+            <span class="material-symbols-outlined" id="edit_description" onclick="edit_description(1)">edit</span>
+
+            <span class="material-symbols-outlined" id="cancel_edit_description" onclick="edit_description(3)" style="display: none">cancel</span>
+
+            <button id="edit_description_update" class="btn button_login" onclick="edit_description(2)">Actualizar</button>
+        </div>
+    </header>
 
         <main>
             <div id="nota">
@@ -489,16 +366,22 @@ const user_content = `
 <div class="container">
     <header>
         <div id="name">
-            <img src="" alt="Icon">
-            <h1>NOMBRE</h1>
+            <img src="img/notebook_icon.png" alt="notebook_icon">
+            <h1 id="title_name"></h1>
         </div>
-        <div id="description">
+        <div class="description" id="description">
             <p>En este espacio podrás ver, editar y borrar tu cuenta. Lo que tu desees.</p>
+
+            <p id="description_name" class="hide"></p>
+            <div id="c_description_input" class="form-floating hide">
+                <input type="text" id="description_input" class="form-control" placeholder="Description">
+                <label for="description_input">Description</label>
+            </div>
         </div>
     </header>
 
     <main>
-        <div id="description">
+        <div class="description">
             <h2>Datos del usuario</h2>
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
                 <div class="form-floating">
@@ -559,10 +442,10 @@ const user_content = `
             </div>
             <br>
             
-            <button class="btn button_login" id="edit_usuario" style="width: 100%" onclick="edit(1)">Editar</button>
+            <button class="btn button_login" id="edit_usuario" style="width: 100%" onclick="edit_user(1)">Editar</button>
             <div id="btn_user_actions" style="display: none; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <button class="btn button_login" onclick="update_userlog()">Save</button>
-                <button class="btn" onclick="edit(2)">Cancel</button>
+                <button class="btn" onclick="edit_user(2)">Cancel</button>
             </div>
         </div>
     </main>
@@ -635,4 +518,33 @@ const user_content = `
     <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
 </div>
 </aside>
+`;
+
+/* El contenido de add_note es para ponerse en main */
+const add_note_content = `
+    <h1>Agrega tu nota!</h1>
+    <div id="nota">
+        <div style="display: grid; grid-template-columns: 1.5fr .5fr">
+            <div class="form-floating" style="width: 500px;">
+                <input type="text" id="title_note" class="form-control" placeholder="Title">
+                <label for="title_note">Title</label>
+            </div>
+            <div style="display: grid; align-content: center;">
+                <input type="color" class="form-control" id="color_note" value="#233622">
+            </div>
+        </div>
+        <hr>
+
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Escribe tu nota ✨" id="note_content"></textarea>
+            <label for="note_content">Nota</label>
+        </div>
+        
+    </div>
+
+
+    <div id="btn_actions">
+        <button class="btn button_login" onclick="add_note()">Agregar</button>
+        <button class="btn" onclick="nav_notes(2)">Cancelar</button>
+    </div>
 `;
