@@ -34,6 +34,9 @@ function link_navbar(n) {
     switch (n) {
         case 1:
             document.getElementById("content").innerHTML = home_content;
+            /* Cargamos las notas */
+            var notes = new Notes(db, localStorage.getItem("uid"));
+            notes.getNotes();
             break;
 
         case 2:
