@@ -13,9 +13,9 @@
     padding: 50px;
 }
 
-#home_aside{
-    position: fixed; 
-    left: 0; 
+#home_aside {
+    position: fixed;
+    left: 0;
     top: 0;
 }
 
@@ -47,20 +47,21 @@ h5 {
     padding: 20px;
     border-radius: 10px;
 
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.445);   
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.445);
 }
 
-#description{
+#description {
     display: grid;
-    grid-template-columns: 1.9fr .1fr; 
+    grid-template-columns: 1.9fr .1fr;
 }
 
-#edit_description_update{
+#edit_description_update {
     margin-top: 10px;
     display: none;
 }
 
-#edit_description, #cancel_edit_description {
+#edit_description,
+#cancel_edit_description {
     color: #233622;
     display: grid;
     place-items: center;
@@ -71,7 +72,7 @@ h5 {
     cursor: pointer;
 }
 
-#cancel_edit_description:hover{
+#cancel_edit_description:hover {
     color: red;
     cursor: pointer;
 
@@ -107,24 +108,33 @@ h5 {
     >.content_note {
         padding: 10px;
 
+        >.title_note {
+            max-height: 90px;
+            overflow: hidden;
+        }
+
         >.text_note {
+            height: 80px;
             max-height: 100px;
-            overflow-y:hidden;            
+            overflow-y: hidden;
         }
     }
 }
 
-#span_edit_note{
+#span_edit_note {
     display: grid;
     place-items: center;
+
+    position: relative;
+    font-size: 30px;
 }
 
-#span_edit_note:hover{
+#span_edit_note:hover {
     color: #44664b;
     cursor: pointer;
 }
 
-#add_note{
+#add_note {
     position: absolute;
     top: 0;
     right: 0;
@@ -146,7 +156,8 @@ h5 {
     margin-bottom: 50px;
 }
 
-#btn_actions{
+#btn_actions {
     display: grid;
     align-content: center;
+    gap: 5px;
 }

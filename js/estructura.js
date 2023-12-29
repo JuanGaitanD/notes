@@ -100,7 +100,7 @@ const home_content = `
         <div id="navbar_title">
             <div id="name">
                 <!-- <img src="" alt="Icon"> -->
-                <h1 id="nombre_navbar">NOMBRE</h1>
+                <h1 id="nombre_navbar">Your Notes</h1>
             </div>
         </div>
 
@@ -120,10 +120,10 @@ const home_content = `
                 <div class="navbar_item">
                     <div>
                         <span class="material-symbols-outlined icon_list">
-                            note_stack
+                            add
                         </span>
                     </div>
-                    <span class="span_navbar_item">Notas</span>
+                    <span class="span_navbar_item">Add Note</span>
                 </div>
             </span>
 
@@ -139,15 +139,15 @@ const home_content = `
             </span>
 
             <!-- <span onclick="link_navbar(n)">
-                <div class="navbar_item">
-                    <div>
-                        <span class="material-symbols-outlined icon_list">
-                            home
-                        </span>
+                    <div class="navbar_item">
+                        <div>
+                            <span class="material-symbols-outlined icon_list">
+                                home
+                            </span>
+                        </div>
+                        <span class="span_navbar_item">Option</span>
                     </div>
-                    <span class="span_navbar_item">Option</span>
-                </div>
-            </span> -->
+                </span> -->
         </div>
     </main>
 
@@ -304,7 +304,7 @@ const note_content = `
         <div id="navbar_title">
             <div id="name">
                 <!-- <img src="" alt="Icon"> -->
-                <h1 id="nombre_navbar">NOMBRE</h1>
+                <h1 id="nombre_navbar">Your Notes</h1>
             </div>
         </div>
 
@@ -324,10 +324,10 @@ const note_content = `
                 <div class="navbar_item">
                     <div>
                         <span class="material-symbols-outlined icon_list">
-                            note_stack
+                            add
                         </span>
                     </div>
-                    <span class="span_navbar_item">Notas</span>
+                    <span class="span_navbar_item">Add Note</span>
                 </div>
             </span>
 
@@ -343,15 +343,15 @@ const note_content = `
             </span>
 
             <!-- <span onclick="link_navbar(n)">
-                <div class="navbar_item">
-                    <div>
-                        <span class="material-symbols-outlined icon_list">
-                            home
-                        </span>
+                    <div class="navbar_item">
+                        <div>
+                            <span class="material-symbols-outlined icon_list">
+                                home
+                            </span>
+                        </div>
+                        <span class="span_navbar_item">Option</span>
                     </div>
-                    <span class="span_navbar_item">Option</span>
-                </div>
-            </span> -->
+                </span> -->
         </div>
     </main>
 
@@ -454,74 +454,97 @@ const user_content = `
 
 
 <aside id="home_aside">
-<main id="navbar">
-    <div id="icon_navbar">
-        <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
-        <input type="hidden" id="control_navbar" value="0">
-    </div>
-
-    <div id="navbar_title">
-        <div id="name">
-            <!-- <img src="" alt="Icon"> -->
-            <h1 id="nombre_navbar">NOMBRE</h1>
+    <main id="navbar">
+        <div id="icon_navbar">
+            <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
+            <input type="hidden" id="control_navbar" value="0">
         </div>
-    </div>
 
-    <div id="navbar_list">
-        <span onclick="link_navbar(1)">
-            <div class="navbar_item">
-                <div>
-                    <span class="material-symbols-outlined icon_list">
-                        home
-                    </span>
-                </div>
-                <span class="span_navbar_item">Home</span>
+        <div id="navbar_title">
+            <div id="name">
+                <!-- <img src="" alt="Icon"> -->
+                <h1 id="nombre_navbar">Your Notes</h1>
             </div>
-        </span>
+        </div>
 
-        <span onclick="link_navbar(2)">
-            <div class="navbar_item">
-                <div>
-                    <span class="material-symbols-outlined icon_list">
-                        note_stack
-                    </span>
-                </div>
-                <span class="span_navbar_item">Notas</span>
-            </div>
-        </span>
-
-        <span onclick="link_navbar(3)">
-            <div class="navbar_item">
-                <div>
-                    <span class="material-symbols-outlined icon_list">
-                        account_circle
-                    </span>
-                </div>
-                <span class="span_navbar_item">Acount</span>
-            </div>
-        </span>
-
-        <!-- <span onclick="link_navbar(n)">
+        <div id="navbar_list">
+            <span onclick="link_navbar(1)">
                 <div class="navbar_item">
                     <div>
                         <span class="material-symbols-outlined icon_list">
                             home
                         </span>
                     </div>
-                    <span class="span_navbar_item">Option</span>
+                    <span class="span_navbar_item">Home</span>
                 </div>
-            </span> -->
-    </div>
-</main>
+            </span>
 
-<div>
-    <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
-</div>
+            <span onclick="link_navbar(2)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            add
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Add Note</span>
+                </div>
+            </span>
+
+            <span onclick="link_navbar(3)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            account_circle
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Acount</span>
+                </div>
+            </span>
+
+            <!-- <span onclick="link_navbar(n)">
+                    <div class="navbar_item">
+                        <div>
+                            <span class="material-symbols-outlined icon_list">
+                                home
+                            </span>
+                        </div>
+                        <span class="span_navbar_item">Option</span>
+                    </div>
+                </span> -->
+        </div>
+    </main>
+
+    <div>
+        <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
+    </div>
 </aside>
 `;
 
-/* El contenido de add_note es para ponerse en main */
 const add_note_content = `
+<section id="home_section">
+<div class="container">
+    <header>
+        <div id="name">
+            <img src="img/notebook_icon.png" alt="notebook_icon">
+            <h1 id="title_name"></h1>
+        </div>
+        <div class="description" id="description">
+            <p id="description_name"></p>
+
+            <div id="c_description_input" class="form-floating hide">
+                <input type="text" id="description_input" class="form-control" placeholder="Description">
+                <label for="description_input">Description</label>
+            </div>
+
+            <span class="material-symbols-outlined" id="edit_description" onclick="edit_description(1)">edit</span>
+
+            <span class="material-symbols-outlined" id="cancel_edit_description" onclick="edit_description(3)" style="display: none">cancel</span>
+
+            <button id="edit_description_update" class="btn button_login" onclick="edit_description(2)">Actualizar</button>
+        </div>
+    </header>
+
+    <main id="main">
     <h1>Agrega tu nota!</h1>
     <div id="nota">
         <div style="display: grid; grid-template-columns: 1.5fr .5fr">
@@ -539,12 +562,92 @@ const add_note_content = `
             <textarea class="form-control" placeholder="Escribe tu nota ✨" id="note_content"></textarea>
             <label for="note_content">Nota</label>
         </div>
-        
+        <input type="hidden" id="id_note" value="">
     </div>
 
 
     <div id="btn_actions">
-        <button class="btn button_login" onclick="add_note()">Agregar</button>
+        <button class="btn button_login" id="btn_add_note" onclick="add_note()">Agregar</button>
+
+        <button class="btn button_login" id="btn_update_note" onclick="update_note()" style="display: none">Actualizar</button>
+
+        <button class="btn" id="btn_delete_note" onclick="delete_note()" style="background-color: red; color: white; display: none;">Eliminar</button>
         <button class="btn" onclick="nav_notes(2)">Cancelar</button>
     </div>
+    </main>
+
+    <div>
+        <button class="btn button_login" id="add_note" onclick="nav_notes(1)">
+            <li class="material-symbols-outlined">add</li>
+        </button>
+    </div>
+</div>
+</section>
+
+
+<aside id="home_aside">
+    <main id="navbar">
+        <div id="icon_navbar">
+            <span class="material-symbols-outlined" id="interaction_icon_navbar" onclick="navbar()">menu</span>
+            <input type="hidden" id="control_navbar" value="0">
+        </div>
+
+        <div id="navbar_title">
+            <div id="name">
+                <!-- <img src="" alt="Icon"> -->
+                <h1 id="nombre_navbar">Your Notes</h1>
+            </div>
+        </div>
+
+        <div id="navbar_list">
+            <span onclick="link_navbar(1)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            home
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Home</span>
+                </div>
+            </span>
+
+            <span onclick="link_navbar(2)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            add
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Add Note</span>
+                </div>
+            </span>
+
+            <span onclick="link_navbar(3)">
+                <div class="navbar_item">
+                    <div>
+                        <span class="material-symbols-outlined icon_list">
+                            account_circle
+                        </span>
+                    </div>
+                    <span class="span_navbar_item">Acount</span>
+                </div>
+            </span>
+
+            <!-- <span onclick="link_navbar(n)">
+                    <div class="navbar_item">
+                        <div>
+                            <span class="material-symbols-outlined icon_list">
+                                home
+                            </span>
+                        </div>
+                        <span class="span_navbar_item">Option</span>
+                    </div>
+                </span> -->
+        </div>
+    </main>
+
+    <div>
+        <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
+    </div>
+</aside>
 `;

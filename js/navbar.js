@@ -40,7 +40,8 @@ function link_navbar(n) {
             break;
 
         case 2:
-            document.getElementById("content").innerHTML = note_content;
+            document.getElementById("content").innerHTML = add_note_content;
+            document.getElementById("add_note").style.display = "none";
             break;
 
         case 3:
