@@ -1,0 +1,115 @@
+/* Media-query para los tamaños min-width de 768px y 1280px */
+/* Le agregué un min-width a 480px */
+
+@media (max-width: 500px) {
+    #form {
+        width: 380px;
+    }
+
+    #home>h1 {
+        text-align: center;
+    }
+
+    #login>h1 {
+        margin-left: 10px;
+    }
+
+    #home_section {
+        padding-top: 100px;
+        padding-inline: 15px;
+        padding-bottom: 20px;
+    }
+
+    #navbar {
+        width: 60px;
+        padding-top: 10px;
+        height: fit-content;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #navbar_list:last-child {
+        margin-bottom: 100px;
+    }
+
+    #icon_navbar>#interaction_icon_navbar {
+        margin: 5px;
+    }
+
+    #add_note {
+        position: fixed;
+        top: 90vh;
+        bottom: 0;
+        right: 0;
+        width: 50px;
+    }
+
+    #title_name {
+        margin-top: 30px;
+    }
+
+    #description {
+        gap: 10px;
+    }
+
+    .description{
+        margin-bottom: 25px;
+    }
+
+    #notes {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .note {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    footer{
+        position: relative;
+    }
+
+    #contenedor_user{
+        grid-template-columns: 1fr;
+    }
+
+    #nota{
+        width: 360px;
+    }
+
+    #title_note_decoration {
+        width: auto;
+    }
+
+    #title_nota_decoration{
+        display: grid;
+        grid-template-columns: 1.7fr .3fr;
+        gap: 5px;
+    }
+
+    #color_note{
+        text-align: center;
+        width: 50px;
+        margin-inline: auto;
+    }
+
+    #note_content{
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .button_login:hover,
+    .button_login:focus {
+        transform: scale(1);
+        transition: 0.3s;
+    }
+}
+
+@media (min-width: 1280px) {
+    
+}

@@ -75,9 +75,11 @@ const home_content = `
     <main id="main">
         <div id="notes">
             <div></div>
-            <center>
-                <h1 style="color: #e7eee6;">No hay notas</h1>
-            </center>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="spinner-grow text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -88,6 +90,11 @@ const home_content = `
     </div>
 </div>
 </section>
+<footer>
+    <center>
+        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2021 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
+    </center>
+</footer>
 
 
 <aside id="home_aside">
@@ -383,7 +390,7 @@ const user_content = `
     <main>
         <div class="description">
             <h2>Datos del usuario</h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div id="contenedor_user">
                 <div class="form-floating">
                     <input type="text" id="username_usuario" class="form-control" placeholder="Username" disabled>
                     <label for="username_usuario">Username</label>
@@ -451,7 +458,11 @@ const user_content = `
     </main>
 </div>
 </section>
-
+<footer>
+    <center>
+        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2021 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
+    </center>
+</footer>
 
 <aside id="home_aside">
     <main id="navbar">
@@ -547,8 +558,8 @@ const add_note_content = `
     <main id="main">
     <h1>Agrega tu nota!</h1>
     <div id="nota">
-        <div style="display: grid; grid-template-columns: 1.5fr .5fr">
-            <div class="form-floating" style="width: 500px;">
+        <div id="title_nota_decoration">
+            <div class="form-floating" id="title_note_decoration">
                 <input type="text" id="title_note" class="form-control" placeholder="Title">
                 <label for="title_note">Title</label>
             </div>
@@ -583,7 +594,11 @@ const add_note_content = `
     </div>
 </div>
 </section>
-
+<footer>
+    <center>
+        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2021 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
+    </center>
+</footer>
 
 <aside id="home_aside">
     <main id="navbar">
@@ -650,4 +665,12 @@ const add_note_content = `
         <button class="btn button_login" id="cerrar_session" onclick="action(3)">Cerrar sesión</button>
     </div>
 </aside>
+`;
+
+const loading_content = `
+<div class="d-flex justify-content-center align-items-center" style="margin-top: 400px">
+    <div class="spinner-grow text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
 `;

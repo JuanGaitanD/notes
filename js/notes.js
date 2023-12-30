@@ -1,7 +1,6 @@
 function nav_notes(n) {
     switch (n) {
-        case 1: 
-            // document.getElementById("content").innerHTML = add_note_content;
+        case 1:             
             link_navbar(2);
             break;
         
@@ -23,6 +22,8 @@ function add_note() {
             content,
             color
         );
+
+        document.getElementById("content").innerHTML = loading_content;
 
         setTimeout(() => {
             location.reload();
@@ -52,6 +53,8 @@ function update_note() {
             content,
             color
         );
+
+        document.getElementById("content").innerHTML = loading_content;
         setTimeout("location.reload()", 1000);
     } else {
         alert("Debes llenar al menos el titulo :D");
@@ -69,5 +72,6 @@ function delete_note() {
     var notes = new Notes(db, localStorage.getItem("uid"));
     notes.deleteNote(id_note);
 
+    document.getElementById("content").innerHTML = loading_content;
     setTimeout("location.reload()", 1000);
 }

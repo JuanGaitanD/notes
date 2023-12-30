@@ -1,4 +1,6 @@
 function page() {
+    document.getElementById("content").innerHTML = loading_content;
+
     /* Valida que se tenga un uid de sessión */
     if (localStorage.getItem("uid")) {
         /* Si exite un UID en la sessión, valida que exista también en la base de datos. Si no existe, le devuelve al login */

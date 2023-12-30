@@ -70,7 +70,13 @@ class login {
                 })
 
                 alert("Usuario registrado correctamente, puedes ingresar ahora");
-                document.getElementById("register_user").style.display = "block";
+                document.getElementById("container").innerHTML = `
+                    <div class="d-flex justify-content-center align-items-center" style="margin-top: 400px">
+                        <div class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                `;
                 this.#page(3000);
             })
             .catch((error) => {
