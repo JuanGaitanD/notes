@@ -50,6 +50,21 @@ function update_userlog() {
 }
 
 function load_user() {
+    db.collection("paises").orderBy("pais", "asc").get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc_two) => {
+                var option = document.createElement("option");
+                option.text = doc_two.data().pais;
+                option.value = doc_two.data().pais;
+
+                document.getElementById("country_usuario").appendChild(option);
+            });
+        })
+        .catch((error) => {
+            alert("Error al cargar los paises" + error);
+        });
+
+
     db.collection("users").doc(user_uid).get()
         .then((doc) => {
             document.getElementById("username_usuario").value = doc.data().username;
@@ -90,7 +105,7 @@ function edit_description(n) {
 
         case 2:
             /* Save edit */
-            if(description_input.value == "" || description_input.value == null || description_input.value == undefined) {
+            if (description_input.value == "" || description_input.value == null || description_input.value == undefined) {
                 alert("Agrega una descripción :D");
                 return;
             }
@@ -98,13 +113,13 @@ function edit_description(n) {
             db.collection("users").doc(user_uid).update({
                 description: description_input.value
             })
-            .then(() => {
-                alert("Descripción actualizada");
-                description_name.innerHTML = description_input.value;
-            })
-            .catch((error) => {
-                alert("Error al actualizar la descripción" + error);
-            })
+                .then(() => {
+                    alert("Descripción actualizada");
+                    description_name.innerHTML = description_input.value;
+                })
+                .catch((error) => {
+                    alert("Error al actualizar la descripción" + error);
+                })
 
             description_name.style.display = "block";
             edit_description.style.display = "grid";

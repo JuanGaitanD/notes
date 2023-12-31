@@ -35,13 +35,35 @@
     <script src="js/login.js"></script>
     <script src="js/modelo/login.js"></script>
     <script src="js/modelo/user.js"></script>
+    <script src="js/modelo/notes.js"></script>
     <script src="js/user.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/notes.js"></script>
 </head>
 
 <body>
     <div id="content"></div>
 </body>
+<!-- <script>
+    
+    function send_paises() {
+        var pais = document.getElementById("paises").value;
+        var region = document.getElementById("region").value;
+
+        db.collection("paises").add({
+            pais: pais,
+            region: region 
+        })
+        .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+            document.getElementById("paises").value = "";
+        })
+        .catch((error) => {
+            alert("Error" + error);
+        })
+    }
+
+</script> -->
 <!-- <script src="js/onload.js"></script> -->
 
 </html>

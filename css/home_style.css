@@ -12,6 +12,9 @@
 footer{
     position: fixed;
     bottom: 0;
+    z-index: 3;
+    
+    margin-top: 50px;
     width: 100%;
     height: fit-content;
     padding: 20px;
@@ -21,13 +24,14 @@ footer{
 }
 
 #home_section {
-    padding: 50px;
+    padding: 50px 0px 120px 50px;
 }
 
 #home_aside {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 3;
 }
 
 h1,
@@ -63,7 +67,7 @@ h5 {
 
 #contenedor_user{
     display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); 
     gap: 20px;
 }
 
@@ -97,7 +101,7 @@ h5 {
 
 #notes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 20px;
     padding: 30px;
 
@@ -166,7 +170,7 @@ h5 {
     background-color: #d6e4d3;
     border-radius: 5px;
     padding: 25px;
-    width: 1296px;
+    min-width: 360px;
     max-width: 1296px;
     max-height: fit-content;
 
@@ -184,7 +188,9 @@ h5 {
 
 #color_note{
     padding: 5px;
-    height: 50px;
+    width: 100px;
+    height: 58px;
+    margin-inline: auto;
 }
 
 #btn_actions {

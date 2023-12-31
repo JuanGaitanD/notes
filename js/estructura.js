@@ -88,13 +88,15 @@ const home_content = `
             <li class="material-symbols-outlined">add</li>
         </button>
     </div>
+
 </div>
 </section>
 <footer>
     <center>
-        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2021 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
+        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2024 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
     </center>
 </footer>
+
 
 
 <aside id="home_aside">
@@ -299,6 +301,11 @@ const note_content = `
         </main>
     </div>
 </section>
+<footer>
+    <center>
+        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2024 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
+    </center>
+</footer>
 
 
 <aside id="home_aside">
@@ -435,10 +442,7 @@ const user_content = `
                 </div>
 
                 <div class="form-floating">
-                    <select id="city_usuario" class="form-select" disabled>
-                        <option value=""></option>
-                        <option value="otro">Otro</option>
-                    </select>
+                    <input type="text" id="city_usuario" class="form-control" placeholder="City" disabled>
                     <label for="city_usuario">City</label>
                 </div>
 
@@ -460,7 +464,7 @@ const user_content = `
 </section>
 <footer>
     <center>
-        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2021 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
+        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2024 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
     </center>
 </footer>
 
@@ -563,7 +567,7 @@ const add_note_content = `
                 <input type="text" id="title_note" class="form-control" placeholder="Title">
                 <label for="title_note">Title</label>
             </div>
-            <div style="display: grid; align-content: center;">
+            <div style="display: grid;">
                 <input type="color" class="form-control" id="color_note" value="#233622">
             </div>
         </div>
@@ -596,7 +600,7 @@ const add_note_content = `
 </section>
 <footer>
     <center>
-        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2021 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
+        <p>Created by <a href="https://www.instagram.com/03_jada_09/">Juan David Gaitán Díaz</a> | © 2024 Your Notes<br>Correo de contacto: juandavidgaitandiaz@gmail.com</p>
     </center>
 </footer>
 
