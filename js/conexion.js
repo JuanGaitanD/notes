@@ -16,3 +16,6 @@ const db = firebase.firestore();
 
 // Initialize authentication
 const auth = firebase.auth();
+
+// Initialize messaging
+const messaging = firebase.messaging();

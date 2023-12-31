@@ -44,46 +44,61 @@ class login {
 
         if (this.#validar_email(email)) return;
 
-        /* Va a registrar el usuario */
-        this.auth.createUserWithEmailAndPassword(email, clave)
-            .then((userCredential) => {
-                var user = userCredential.user;
-                // console.log(user);
+        /* Validamos que no exista el usuario */
+        this.db.collection("users").where("email", "==", email).get()
+            .then((querySnapshot) => {
+                if (!querySnapshot.empty) {
+                    alert("El usuario ya existe");
+                    return;
+                } else {
+                    /* Va a registrar el usuario */
+                    this.auth.createUserWithEmailAndPassword(email, clave)
+                        .then((userCredential) => {
+                            var user = userCredential.user;
+                            // console.log(user);
 
-                /* Guardamos los datos del usuario en la base de datos */
-                this.db.collection("users").doc(user.uid).set({
-                    uid: user.uid,
-                    username: usuario,
-                    first: "",
-                    last: "",
-                    age: "",
-                    email: email,
-                    phone: "",
-                    country: "",
-                    city: "",
-                    adress: "",
-                    description: "Here your description"
-                })
-                .catch((error) => {
-                    console.log(error);
-                    alert("Error al registrar el usuario - DB - " + error);
-                })
+                            /* Guardamos los datos del usuario en la base de datos */
+                            this.db.collection("users").doc(user.uid).set({
+                                uid: user.uid,
+                                username: usuario,
+                                first: "",
+                                last: "",
+                                age: "",
+                                email: email,
+                                phone: "",
+                                country: "",
+                                city: "",
+                                adress: "",
+                                description: "Here your description"
+                            })
+                                .catch((error) => {
+                                    console.log(error);
+                                    alert("Error al registrar el usuario - DB - " + error);
+                                })
 
-                alert("Usuario registrado correctamente, puedes ingresar ahora");
-                document.getElementById("container").innerHTML = `
-                    <div class="d-flex justify-content-center align-items-center" style="margin-top: 400px">
-                        <div class="spinner-grow text-success" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                `;
-                this.#page(3000);
+                            alert("Usuario registrado correctamente, puedes ingresar ahora");
+                            document.getElementById("container").innerHTML = `
+                                <div class="d-flex justify-content-center align-items-center" style="margin-top: 400px">
+                                    <div class="spinner-grow text-success" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            `;
+                            this.#page(3000);
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                            alert("Error al registrar el usuario, verifica los datos");
+                            return;
+                        })
+                }
             })
             .catch((error) => {
                 console.log(error);
-                alert("Error al registrar el usuario, verifica los datos");
-                return;
+                alert("Error al comprobar correo del usuario " + error);
             })
+
+
     }
 
     close_session() {
@@ -96,7 +111,7 @@ class login {
     #page(n) {
         setTimeout(() => {
             window.location.href = "index.html";
-        }, n);       
+        }, n);
     }
 
     #validar_email(email) {
