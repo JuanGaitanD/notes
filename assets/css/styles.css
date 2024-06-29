@@ -1,0 +1,44 @@
+.btn_login {
+  background: #82a682;
+  border-color: #82a682;
+  font-weight: bold;
+  color: white;
+}
+
+.btn_login:hover {
+  background: #e7eee6;
+  color: #233622;
+  transform: scale(1.03);
+  transition: ease;
+  border-color: #233622;
+}
+
+.btn_register {
+  color: #233622;
+  text-align: center;
+  background: transparent;
+  border-style: none;
+}
+
+. {
+}
+
+@media (min-width: 576px) {
+  .article {
+  }
+}
+
+@media (max-width: 330px) {
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 330px) {
+  div {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+

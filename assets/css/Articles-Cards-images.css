@@ -1,0 +1,49 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+.btn_view:hover {
+  transform: scale(1.05);
+  border: 2px solid #233622 ;
+  border-top: 2px solid #233622 ;
+}
+
+.btn_edit:hover {
+  color: #233622;
+  background: #e7eee6;
+}
+
+.edit_icon:hover {
+  color: #233622;
+}
+
+.btn_edit_info:hover {
+  color: #233622;
+  background: #e7eee6;
+  border-width: 2px;
+  border-style: solid;
+}
+
+@media (max-width: 576px) {
+  .d-print-none.btn_login {
+    height: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn_login {
+  }
+}
+
+@media (min-width: 300px) {
+  .btn_login {
+    margin-bottom: 13px;
+  }
+}
+
+@media (max-width: 330px) {
+  .first-main-menu {
+    height: 50vh;
+  }
+}
+

@@ -17,8 +17,9 @@ function page() {
                     document.getElementById("description_input").value = querySnapshot.docs[0].data().description;
 
                     /* Cargamos las notas */
-                    var notes = new Notes(db, localStorage.getItem("uid"));
+                    var notes = new Notes(db, localStorage.getItem("uid"), querySnapshot.docs[0].data().username);
                     notes.getNotes();
+                    add_pickup_color();
                 }
             })
             .catch((error) => {

@@ -12,12 +12,29 @@ function nav(n) {
             document.querySelector("#username").value = "";
             document.querySelector("#email").value = "";
             document.querySelector("#password").value = "";
+
+            document.querySelector("#login_btn").addEventListener("click", (e) => {
+                e.preventDefault();
+                var email = document.querySelector("#email_login").value;
+                var clave = document.querySelector("#password_login").value;
+
+                lg.ingresar(email, clave);
+            });
             break;
 
         case 2:
             home.style.display = "none";
             login.style.display = "none";
             register.style.display = "block";
+
+            document.querySelector("#register_btn").addEventListener("click", (e) => {
+                e.preventDefault();
+                var username = document.querySelector("#username").value;
+                var email = document.querySelector("#email").value;
+                var clave = document.querySelector("#password").value;
+
+                lg.registrar(username, email, clave);
+            });
             break;
     }
 
@@ -29,3 +46,4 @@ function nav(n) {
     document.querySelector("#password").value = "";
     */
 }
+

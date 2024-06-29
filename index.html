@@ -1,49 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Your Notes</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
     <!-- Details -->
-    <link rel="icon" href="img/notebook_icon.png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans&family=Roboto&family=Ubuntu+Condensed&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="icon" href="assets/img/notebook_icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/> <!-- 'nano' theme -->
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
 
-    <!-- style -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home_style.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/media_query.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Articles-Cards-images.css">
+    <link rel="stylesheet" href="assets/css/Collapsible-Sidebar.css">
+    <link rel="stylesheet" href="assets/css/Form-Input.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Basic-icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
     <script src="js/conexion.js"></script>
 
-    <!-- Scritps -->
+    <!-- Scripts -->
     <script src="js/estructura.js"></script>
-    <script src="js/login.js"></script>
     <script src="js/modelo/login.js"></script>
+    <script src="js/login.js"></script>
     <script src="js/modelo/user.js"></script>
     <script src="js/modelo/notes.js"></script>
     <script src="js/user.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/notes.js"></script>
+    <script src="js/pickup_color.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/media_query.css">
 </head>
 
-<body>
+<body style="background: rgb(231,238,230);font-family: Ubuntu, sans-serif;">
     <div id="content"></div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
 </body>
 <script src="js/onload.js"></script>
-
 </html>

@@ -7,7 +7,6 @@ class login {
         this.db = db;
         this.home_content = home_content;
         this.login_content = login_content;
-        this.note_content = note_content;
     }
 
     ingresar(email, clave) {
@@ -17,25 +16,30 @@ class login {
             return;
         }
 
-        if (this.#validar_email(email)) return;
+        if (this.#validar_email(email)) {
+            alert("Correo no valido");
+            return;
+        } 
 
         /* Va a ingresar al usuario */
         this.auth.signInWithEmailAndPassword(email, clave)
             .then((userCredential) => {
                 var user = userCredential.user;
+                
                 // var user_data = JSON.stringify(user);
-                // console.log(user.uid);
+                console.log(user.uid);
                 localStorage.setItem("uid", user.uid);
             })
             .catch((error) => {
                 alert("Usuario o contraseña incorrectos");
+
                 console.log(error);
                 document.querySelector("#email_login").value = "";
                 document.querySelector("#password_login").value = "";
                 return;
             })
 
-        this.#page(1000);
+        this.#page(3000);
     }
 
     registrar(usuario, email, clave,) {
@@ -149,33 +153,32 @@ class login {
 /* Creamos el objeto de login */
 var lg = new login(auth, db);
 
-
 /* Funcion para loggear y registrar */
-function action(n) {
-    switch (n) {
-        case 1:
-            /* Funcion para ingresar */
+// function action(n) {
+//     switch (n) {
+//         case 1:
+//             /* Funcion para ingresar */
 
-            var email = document.querySelector("#email_login").value;
-            var clave = document.querySelector("#password_login").value;
+//             var email = document.querySelector("#email_login").value;
+//             var clave = document.querySelector("#password_login").value;
 
-            lg.ingresar(email, clave);
-            break;
+//             lg.ingresar(email, clave);
+//             break;
 
-        case 2:
-            /* Funcion para registrar */
+//         case 2:
+//             /* Funcion para registrar */
 
-            var username = document.querySelector("#username").value;
-            var email = document.querySelector("#email").value;
-            var clave = document.querySelector("#password").value;
+//             var username = document.querySelector("#username").value;
+//             var email = document.querySelector("#email").value;
+//             var clave = document.querySelector("#password").value;
 
-            lg.registrar(username, email, clave);
-            break;
+//             lg.registrar(username, email, clave);
+//             break;
 
-        case 3:
-            /* Funcion para cerrar sesion */
+//         case 3:
+//             /* Funcion para cerrar sesion */
 
-            lg.close_session();
-            break;
-    }
-}
+//             lg.close_session();
+//             break;
+//     }
+// }

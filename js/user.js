@@ -79,7 +79,7 @@ function load_user() {
             document.getElementById("adress_usuario").value = doc.data().adress;
         })
         .catch((error) => {
-            alert("error cargando los datos del usuario" + error);
+            console.log("Error cargando los datos del usuario" + error);
         })
 }
 

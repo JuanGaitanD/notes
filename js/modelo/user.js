@@ -20,6 +20,7 @@ class user{
         })
         .then(() => {
             alert("User updated succesfully");
+            document.getElementById("container").innerHTML = "<h1>Updating user...</h1>";
             setTimeout(() => {
                 location.reload();
             }, 2000);

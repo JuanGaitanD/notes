@@ -13,7 +13,7 @@ function nav_notes(n) {
 function add_note() {
     var title = document.getElementById("title_note").value;
     var content = document.getElementById("note_content").value;
-    var color = document.getElementById("color_note").value;
+    var color = document.getElementById("color_note_add").value;
     
     if (title != "" && content != "") {
         var notes = new Notes(db, localStorage.getItem("uid"));
@@ -35,9 +35,9 @@ function add_note() {
 
 function update_note() {
     const id_note = document.getElementById("id_note").value;
-    var title = document.getElementById("title_note").value;
-    var content = document.getElementById("note_content").value;
-    var color = document.getElementById("color_note").value;
+    var title = document.getElementById("title_note_update").value;
+    var content = document.getElementById("note_content_update").value;
+    var color = document.getElementById("color_note_update").value;
 
     if (id_note == "") {
         alert("Error al actualizar nota");
@@ -55,7 +55,7 @@ function update_note() {
         );
 
         document.getElementById("content").innerHTML = loading_content;
-        setTimeout("location.reload()", 1000);
+        setTimeout("location.reload()", 3000);
     } else {
         alert("Debes llenar al menos el titulo :D");
     }
@@ -73,5 +73,5 @@ function delete_note() {
     notes.deleteNote(id_note);
 
     document.getElementById("content").innerHTML = loading_content;
-    setTimeout("location.reload()", 1000);
+    setTimeout("location.reload()", 3000);
 }
