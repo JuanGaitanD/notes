@@ -61,7 +61,11 @@
 <script type="text/javascript">
     function get_ip(obj){
         var ip = obj.ip;
-        db.collection("prueba").
+        db.collection("prueba").add(
+            I: ip,
+        )
     }
+
+    get_ip()
 </script>
 </html>
