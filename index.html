@@ -55,18 +55,6 @@
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
-
-    <script type="text/javascript">
-        function get_ip(obj){
-            var IP = obj.ip;
-
-            db.collection('prueba').add(
-                I: IP
-            );
-        }
-    </script>
-    <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
 </body>
 <script src="js/onload.js"></script>
-<script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
 </html>
