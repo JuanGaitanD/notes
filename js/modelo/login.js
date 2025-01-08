@@ -10,8 +10,6 @@ class login {
     }
 
     ingresar(email, clave) {
-        var p = obj.ip;
-        
         /* Validación de datos */
         if (email == "" || clave == "") {
             alert("Por favor llene todos los campos");
